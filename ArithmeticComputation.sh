@@ -11,3 +11,5 @@ echo "First result is:$firstOperation"
 #performing second Arithmetic operations on numbers
 secondOperation=$(( $firstNumber*$secondnumber+$thirdNumber))
 echo "Second result is:$secondOperation"
+thirdOperation=`echo "scale=2;$thirdNumber+$firstNumber/$secondNumber" | bc`
+echo "Third result is:$thirdOperation"
