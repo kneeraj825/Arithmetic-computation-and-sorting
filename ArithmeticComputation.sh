@@ -13,3 +13,5 @@ secondOperation=$(( $firstNumber*$secondnumber+$thirdNumber))
 echo "Second result is:$secondOperation"
 thirdOperation=`echo "scale=2;$thirdNumber+$firstNumber/$secondNumber" | bc`
 echo "Third result is:$thirdOperation"
+fourthOperation=`echo "scale=2; $firstNumber%$secondNumber+$thirdNumber" | bc`
+echo "Fourth result is:$fourthOperation"
