@@ -47,3 +47,20 @@ done
 echo "Descending order values is:" ${array[@]}
 echo ${#array[@]}
 
+#sorting the result in Ascending order
+for (( firstIndex=0; firstIndex<${#array[@]}; firstIndex++ ))
+do
+   for (( secondIndex=0; secondIndex<${#array[@]}-1; secondIndex++ ))
+   do
+      if (($(echo "${array[secondIndex]} > ${array[secondIndex+1]}"| bc -l)))
+      then
+            temporary=${array[secondIndex]}
+            array[secondIndex]=${array[secondIndex+1]}
+            array[secondIndex+1]=$temporary
+      fi
+   done
+done
+echo "Ascending order values is:" ${array[@]}
+echo ${#array[@]}
+
+
