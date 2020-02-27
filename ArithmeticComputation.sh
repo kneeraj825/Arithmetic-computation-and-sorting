@@ -24,7 +24,7 @@ declare -A arithmetic
 	#storing Dictionary into array
 	for (( index=0; index<${#arithmetic[@]}; index++ ))
 	do
-   	array[index]=${arithmetic[operation$((index+1))]}
+	array[index]=${arithmetic[operation$((index+1))]}
 	done
 	#sorting the result in Descending order
 	for (( firstIndex=0; firstIndex<${#array[@]}; firstIndex++ ))
